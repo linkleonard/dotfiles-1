@@ -31,9 +31,8 @@ atom-text-editor::shadow .cursor {
   // border-color: red;
 }
 
-atom-text-editor {
-  .invisible-character {
-    // color: red;
-    // opacity: .3;
-  }
+atom-text-editor::shadow .leading,
+atom-text-editor .invisible-character,
+atom-text-editor::shadow .indent-guide {
+    color: #3c4044;
 }

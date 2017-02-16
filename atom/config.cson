@@ -4,9 +4,10 @@
     disabledPackages: [
       "react"
     ]
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "cobalt2-syntax"
+      "base16-tomorrow-dark-theme"
     ]
   editor:
     fontFamily: "Menlo"

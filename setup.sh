@@ -301,6 +301,21 @@ install_zsh () {
   fi
 }
 
+THEME_REPO=https://github.com/caiogondim/bullet-train.zsh.git
+THEME_DIR=$HOME/Documents/bullet-train.zsh
+THEME_FILE=bullet-train.zsh-theme
+
+install_theme () {
+  if [[ ! -d "$THEME_DIR" ]]; then
+      git clone "$THEME_REPO" "$THEME_DIR"
+  else
+      pushd $THEME_DIR
+      git pull
+      popd
+  fi
+
+}
+
 # Package managers & packages
 
 # . "$DOTFILES_DIR/install/brew.sh"
@@ -328,8 +343,11 @@ main
 # Zsh                                                                         #
 ###############################################################################
 
+install_theme
+
 # Install Zsh settings
 ln -s ~/dotfiles/zsh/themes/nick.zsh-theme $HOME/.oh-my-zsh/themes
+ln -s "$THEME_DIR/$THEME_FILE" $HOME/.oh-my-zsh/themes
 
 
 ###############################################################################
