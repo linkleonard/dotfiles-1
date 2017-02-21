@@ -9,6 +9,7 @@
         branch-name = rev-parse --abbrev-ref HEAD
         branch-diff = diff master...HEAD
         branch-files = "!git diff master...HEAD --name-status | sed '/^D/d ; s/^.\\s\\+//'"
+        branch-at-commit = "!git checkout $(git branch --contains $1 | strip-ansi | gsed -E 's/ +//g')"
 
         # Commit
         c = commit
@@ -27,6 +28,10 @@
         # Checkout
         co = checkout
         cb = checkout -b
+        cop = checkout -p
+
+        # Checkout hash as branch
+        chb = !"co() { git checkout $(git branch --contains $1 | strip-ansi); }; co"
 
         # Cherry-pick
         cp = cherry-pick
@@ -182,7 +187,7 @@
         tool = opendiff
 
 [core]
-        editor = nano
+	editor = atom --wait --new-window
         abbrev = 12
         attributesfile = ~/.gitattributes
         excludesfile = ~/.gitignore

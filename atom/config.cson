@@ -1,4 +1,13 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "33b60675-49d3-4e62-8934-7baa8fd22970"
+    python:
+      default_beautifier: "yapf"
+    xml:
+      default_beautifier: "JS Beautify"
+      end_with_newline: true
+      wrap_attributes: "force"
   autoprefixer: {}
   core:
     disabledPackages: [
@@ -11,25 +20,25 @@
     ]
   editor:
     fontFamily: "Menlo"
-    fontSize: 15
-    invisibles:
-      cr: " "
-      eol: " "
-      tab: "⇨"
+    invisibles: {}
     preferredLineLength: 120
+    showIndentGuide: true
     showInvisibles: true
     softWrap: true
     softWrapAtPreferredLineLength: true
+    tabLength: 4
     tabType: "soft"
   emmet: {}
   "exception-reporting":
     userId: "0f4e16a3-5040-01ba-b000-a0793a69fb44"
+  "git-plus":
+    general:
+      _analyticsUserId: "298d9b74-dd8e-4aca-aa86-dcd3f55863a9"
   "highlight-line":
     enableBackgroundColor: false
   jshint:
     supportLintingJsx: true
-  linter:
-    showErrorPanel: false
+  linter: {}
   "markdown-preview":
     useGitHubStyle: true
   minimap:
@@ -61,6 +70,10 @@
 ".csx.source":
   editor:
     preferredLineLength: 120
+".diff.source":
+  editor:
+    preferredLineLength: 120
+    tabLength: 4
 ".git-commit.text":
   editor:
     preferredLineLength: 120

@@ -268,6 +268,13 @@ main() {
 
 }
 
+install_tmux () {
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  tmux source ~/.tmux.conf
+  ~/.tmux/plugins/tpm/bin/install_plugins
+}
+
+
 install_zsh () {
   # Test to see if zshell is installed.  If it is:
   if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
@@ -320,6 +327,8 @@ install_theme () {
 
 # . "$DOTFILES_DIR/install/brew.sh"
 # . "$DOTFILES_DIR/install/npm.sh"
+
+sudo -H pip install yapf
 
 # if [ "$(uname)" == "Darwin" ]; then
     # . "$DOTFILES_DIR/install/brew-cask.sh"
