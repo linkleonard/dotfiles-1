@@ -19,13 +19,12 @@
       "base16-tomorrow-dark-theme"
     ]
   editor:
+    autoIndentOnPaste: false
     fontFamily: "Menlo"
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true
     showInvisibles: true
-    softWrap: true
-    softWrapAtPreferredLineLength: true
     tabLength: 4
     tabType: "soft"
   emmet: {}
@@ -64,6 +63,9 @@
 ".cake.source":
   editor:
     preferredLineLength: 120
+".console.python.text":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…_"
 ".cs.source":
   editor:
     preferredLineLength: 120
@@ -101,3 +103,12 @@
 ".nant-build.source":
   editor:
     preferredLineLength: 120
+".python.regexp.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…_"
+".python.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…_"
+".python.text.traceback":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…_"
