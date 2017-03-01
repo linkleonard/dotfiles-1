@@ -3,6 +3,7 @@
         # Staging
         a = add
         aa = add --all
+        ap = add --patch
 
         # Branch
         br = branch
@@ -74,6 +75,7 @@
 
         # Remote
         r = remote -v
+        rename = branch --move
 
         # Submodules
         subpl = submodule update --init --recursive
@@ -102,7 +104,7 @@
 
   # Find commits by commit message
 
-  cm = "!f() { \
+  find-commit = "!f() { \
       git log --pretty=custom --decorate --date=short --grep=\"$1\"; \
   }; f"
 

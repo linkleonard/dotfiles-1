@@ -10,6 +10,10 @@
       wrap_attributes: "force"
   autoprefixer: {}
   core:
+    customFileTypes:
+      "source.tmux": [
+        "tmux.conf"
+      ]
     disabledPackages: [
       "react"
     ]
@@ -53,6 +57,7 @@
   "one-dark-ui": {}
   "one-light-ui": {}
   pigments: {}
+  "project-manager": {}
   react: {}
   "tree-view": {}
   welcome:

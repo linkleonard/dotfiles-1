@@ -26,13 +26,12 @@ atom-text-editor {
   // background-color: hsl(180, 24%, 12%);
 }
 
-// To style other content in the text editor's shadow DOM, use the ::shadow expression
-atom-text-editor::shadow .cursor {
+atom-text-editor .syntax--cursor {
   // border-color: red;
 }
 
-atom-text-editor::shadow .leading,
+atom-text-editor .syntax--leading,
 atom-text-editor .invisible-character,
-atom-text-editor::shadow .indent-guide {
+atom-text-editor .syntax--indent-guide {
     color: #3c4044;
 }

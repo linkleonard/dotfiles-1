@@ -1,0 +1,12 @@
+[
+  {
+    title: "Medpilot 2"
+    group: "medpilot"
+    paths: [
+      "/Users/leonard/Documents/medpilot-2"
+    ]
+    devMode: true
+    settings:
+        "editor.tabLength": 4
+  }
+]

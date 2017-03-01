@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # fortune: brew install fortune ponysay
 # fortune | ponysay
 
-BULLETTRAIN_PROMPT_CHAR="$ "
-
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 eval "$(rbenv init -)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
