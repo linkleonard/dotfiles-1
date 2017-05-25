@@ -13,6 +13,8 @@ dirs_to_prepend=(
   "$HOME/dotfiles/bin"
   "$HOME/bin"
   "$HOME/.rvm/bin"
+  "$HOME/.composer/vendor/bin"
+  "$(brew --prefix homebrew/php/php70)/bin"
   "$(brew --prefix ruby)/bin"
   "$(brew --prefix coreutils)/libexec/gnubin" # Add brew-installed GNU core utilities bin
   "$(brew --prefix)/share/npm/bin" # Add npm-installed package bin
@@ -74,6 +76,8 @@ plugins=(fabric brew node npm history git-flow vagrant zsh-syntax-highlighting)
 
 # User configuration
 
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
 # Load the shell dotfiles
 for file in $HOME/.{shell_exports,shell_aliases,shell_functions,shell_config}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -105,5 +109,6 @@ source $ZSH/oh-my-zsh.sh
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 eval "$(rbenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

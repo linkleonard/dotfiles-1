@@ -4,3 +4,7 @@ dev
 storage
 .node-gyp
 .npm
+
+
+# remoteEdit may store passphrases here
+remoteEdit.json

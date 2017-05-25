@@ -32,7 +32,7 @@
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
 'atom-text-editor':
- 'ctrl-cmd-]': 'editor:auto-indent'
+  'ctrl-cmd-]': 'editor:auto-indent'
 
 '.platform-win32, .platform-linux':
   'ctrl-t': 'editor:transpose'

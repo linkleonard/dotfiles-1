@@ -8,25 +8,35 @@
       default_beautifier: "JS Beautify"
       end_with_newline: true
       wrap_attributes: "force"
+  "autocomplete-python":
+    extraPaths: "$PROJECT"
+    outputDebug: true
+    outputProviderErrors: true
+    useSnippets: "required"
   autoprefixer: {}
   core:
     customFileTypes:
       "source.tmux": [
         "tmux.conf"
       ]
+      "text.html.jinja": [
+        "html.jinja"
+      ]
     disabledPackages: [
       "react"
     ]
     telemetryConsent: "limited"
     themes: [
-      "one-dark-ui"
+      "atom-dark-ui"
       "base16-tomorrow-dark-theme"
     ]
   editor:
     autoIndentOnPaste: false
     fontFamily: "Menlo"
+    fontSize: 13
     invisibles: {}
     preferredLineLength: 120
+    scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
     tabLength: 4
@@ -35,17 +45,35 @@
   "exception-reporting":
     userId: "0f4e16a3-5040-01ba-b000-a0793a69fb44"
   "git-plus":
+    commits:
+      verboseCommits: true
+    diffs:
+      wordDiff: false
     general:
       _analyticsUserId: "298d9b74-dd8e-4aca-aa86-dcd3f55863a9"
+      enableStatusBarIcon: false
+      openInPane: false
+      splitPane: "Right"
+    remoteInteractions:
+      promptForBranch: true
+      pullBeforePush: true
+      pullRebase: true
   "highlight-line":
     enableBackgroundColor: false
   jshint:
     supportLintingJsx: true
   linter: {}
+  "linter-eslint":
+    useGlobalEslint: true
+  "linter-ui-default":
+    panelHeight: 81
   "markdown-preview":
     useGitHubStyle: true
   minimap:
+    disablePythonDocLinks: true
     plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
       "highlight-selected": true
       "highlight-selectedDecorationsZIndex": 0
       pigments: true
@@ -56,6 +84,10 @@
     highlightCursorsLines: true
   "one-dark-ui": {}
   "one-light-ui": {}
+  "php-debug":
+    currentConsoleHeight: "183px"
+    currentPanelHeight: "233px"
+    currentPanelMode: "bottom"
   pigments: {}
   "project-manager": {}
   react: {}
@@ -90,6 +122,10 @@
 ".git-rebase.text":
   editor:
     preferredLineLength: 120
+".jinja.python.source":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…_"
+    preferredLineLength: 79
 ".js.jsx.react.source":
   editor:
     showInvisibles: true
@@ -111,9 +147,11 @@
 ".python.regexp.source":
   editor:
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…_"
+    preferredLineLength: 79
 ".python.source":
   editor:
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…_"
+    preferredLineLength: 79
 ".python.text.traceback":
   editor:
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…_"
